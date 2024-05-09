@@ -1,0 +1,15 @@
+.check {
+  min-width: 300px;
+  fill: chocolate;
+}
+
+.graphic {
+  background: -webkit-linear-gradient(#404040, #333230);
+  border-color: #3b3132;
+}
+
+@media (max-width: 300px) {
+  .check {
+    min-width: unset;
+  }
+}
