@@ -4,20 +4,17 @@ module.exports = {
   theme: {
     screens: {
       "2xl": { max: "1536px" },
-
       xl: { max: "1280px" },
-
       lg: { max: "1024px" },
-
       md: { max: "880px" },
-
       sm: { max: "760px" },
-
       xsm: { max: "630px" },
 
       swResizeLg: { max: "660px" },
       swResizeMd: { max: "480px" },
       currenciesSm: { min: "760px" },
+
+      textSm: { max: "540px" },
     },
     colors: {
       mainGrey: "#333230",

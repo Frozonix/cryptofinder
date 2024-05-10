@@ -42,7 +42,7 @@ export function SavedCardWrapper({ data, currencyData }) {
               />
             </div>
             <div className="flex flex-col min-w-[260px] text-lightSand">
-              <div className="flex flex-row items-center justify-between">
+              <div className="flex flex-row items-center justify-between xsm:flex-col-reverse">
                 <h1 className="font-semibold">{item.name}</h1>
                 <div>
                   <img

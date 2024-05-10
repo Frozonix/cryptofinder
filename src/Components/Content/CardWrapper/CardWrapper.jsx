@@ -45,16 +45,16 @@ export function CardWrapper({ data, currencyData, border }) {
                 className="min-w-[330px] fill-sand text-sand filter md:min-w-[300px] xsm:min-w-[260px]"
                 alt=""
               />
-              <div className="flex flex-row items-center gap-x-5 text-lightSand text-center relative currenciesSm:hidden">
+              <div className="flex flex-row justify-between items-center gap-x-5 text-lightSand text-center relative currenciesSm:hidden">
                 {currencies(item)}
               </div>
             </div>
             <div className="flex flex-row items-center gap-x-5 text-lightSand text-center relative lg:flex-col lg:gap-4 lg:self-center sm:hidden">
               {currencies(item)}
             </div>
-            <div className="flex flex-col min-w-[260px] text-lightSand md:min-w-[220px] sm:min-w-[260px]">
-              <div className="flex flex-row items-center justify-between">
-                <h1 className="font-semibold">{item.name}</h1>
+            <div className="flex flex-col min-w-[260px] text-lightSand md:min-w-[220px] sm:min-w-[260px] xsm:justify-evenly xsm:ml-4 xsm:min-w-0 xsm:w-full">
+              <div className="flex flex-row items-center justify-between xsm:flex-col-reverse">
+                <h1 className="font-semibold textSm:text-sm">{item.name}</h1>
                 <div>
                   <img
                     src={item.large}
@@ -65,8 +65,12 @@ export function CardWrapper({ data, currencyData, border }) {
                 </div>
               </div>
               <div>
-                <div>Market cap: {item.data.market_cap}</div>
-                <div>Актуальность: {item.market_cap_rank}</div>
+                <div className="textSm:text-xs">
+                  Market cap: {item.data.market_cap}
+                </div>
+                <div className="textSm:text-xs">
+                  Актуальность: {item.market_cap_rank}
+                </div>
               </div>
             </div>
           </div>
