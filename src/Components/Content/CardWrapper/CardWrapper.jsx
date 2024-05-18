@@ -3,7 +3,8 @@ import "./style.css";
 import cn from "classnames";
 import { Currency } from "../Currency/Currency.jsx";
 import { MainLoader } from "../../MainLoader/MainLoader.jsx";
-export function CardWrapper({ data, currencyData, border }) {
+import { Card } from "../Card/Card.jsx";
+export function CardWrapper({ data, currencyData }) {
   const currencies = (item) => {
     return (
       <>
@@ -26,9 +27,20 @@ export function CardWrapper({ data, currencyData, border }) {
   }
 
   return (
-    <div className={cn("w-full", border)}>
+    <div className={"w-full"}>
       {data.map((coinObj) => {
         const item = coinObj.item;
+        return (
+          <Card
+            name={item.name}
+            sparkline={item.data.sparkline}
+            avatar={item.large}
+            mc={item.data.market_cap}
+            mcr={item.market_cap_rank}
+            price={item.data.price}
+            currencyData={currencyData}
+          />
+        );
         return (
           <div
             className="flex flex-row justify-between w-full mb-5 p-1 border-2 border-sand rounded-lg bg-midGrey2"

@@ -5,7 +5,7 @@ import throttle from "lodash.throttle";
 import { Loader } from "../../LoaderSearch/LoaderSearch";
 import OutsideClickHandler from "react-outside-click-handler";
 
-export function SearchInput({ value, handleChange }) {
+export function SearchInput({ value, handleChange, onAdd }) {
   const [isFocused, setIsFocused] = useState(false);
   const [coinsData, setCoinsData] = useState([]);
   const [status, setStatus] = useState("ok");
@@ -72,6 +72,7 @@ export function SearchInput({ value, handleChange }) {
         <SearchList
           coinsData={coinsData.slice(0, 12)}
           handleFocus={(bool) => setIsFocused(bool)}
+          onAdd={() => onAdd()}
         />
       ) : null}
     </OutsideClickHandler>

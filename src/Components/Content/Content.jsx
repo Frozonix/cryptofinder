@@ -51,16 +51,12 @@ export function Content() {
   return (
     <div className="w-[1040px] h-full bg-stone-700">
       <Logo />
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center border-[12px] border-solid border-transparent">
         <Switcher currentId={switcherId} handleChange={handleSwitcherChange} />
         {switcherId === 0 ? (
-          <CardWrapper
-            data={coinsData}
-            currencyData={currencyData}
-            border={border}
-          />
+          <CardWrapper data={coinsData} currencyData={currencyData} />
         ) : (
-          <SearchWrapper border={border} />
+          <SearchWrapper currencyData={currencyData} />
         )}
       </div>
     </div>
