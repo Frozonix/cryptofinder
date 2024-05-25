@@ -9,9 +9,11 @@ module.exports = {
       md: { max: "880px" },
       sm: { max: "760px" },
       xsm: { max: "630px" },
+      xxsm: { max: "465px" },
 
       swResizeLg: { max: "660px" },
-      swResizeMd: { max: "480px" },
+      swResizeMd: { max: "490px" },
+      swResizeSm: { max: "448px" },
       currenciesSm: { min: "760px" },
 
       textSm: { max: "540px" },

@@ -6,6 +6,7 @@ export function SearchList({ coinsData, handleFocus, onAdd }) {
       <ul className="overflow-hidden rounded-md">
         {coinsData.map((coin) => (
           <li
+            key={coin.symbol}
             className={itemClassname}
             onClick={(e) => {
               const key = "saved-coins";

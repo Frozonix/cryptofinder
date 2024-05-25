@@ -12,8 +12,6 @@ export function Content() {
   const [coinsData, setCoinsData] = useState(null);
   const [currencyData, setCurrencyData] = useState(null);
 
-  const border = "border-[12px] border-solid border-transparent";
-
   const apiRequest = () => {
     const url =
       "https://api.coingecko.com/api/v3/search/trending?x_cg_api_key=" + apiKey;

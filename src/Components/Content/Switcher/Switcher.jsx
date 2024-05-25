@@ -11,7 +11,7 @@ export function Switcher({ currentId, handleChange }) {
     return "bg-notActive w-[300px]";
   };
   return (
-    <div className="flex flex-row justify-center text-center w-[600px] h-9 bg-white rounded-lg border-2 border-brown mb-[60px] swResizeLg:w-[500px] swResizeMd:w-[440px]">
+    <div className="flex flex-row justify-center text-center w-[600px] h-9 bg-white rounded-lg border-2 border-brown mb-[60px] swResizeLg:w-[450px] swResizeMd:w-[380px] swResizeSm:w-[300px] swResizeSm:text-[13px]">
       <label
         htmlFor="actual-id"
         className={cn(

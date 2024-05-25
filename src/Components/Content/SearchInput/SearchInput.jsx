@@ -42,10 +42,6 @@ export function SearchInput({ value, handleChange, onAdd }) {
     }
   }, [value]);
 
-  useEffect(() => {
-    console.log(status);
-  }, [status]);
-
   return (
     <OutsideClickHandler
       onOutsideClick={() => {
@@ -65,8 +61,6 @@ export function SearchInput({ value, handleChange, onAdd }) {
       <div className="absolute right-2 top-1.5">
         {status === "loading" ? <Loader /> : null}
       </div>
-
-      {/* value && isFocused && coinsData.length && status !== "loading" ? */}
 
       {value && isFocused && coinsData.length && status !== "loading" ? (
         <SearchList
